@@ -42,7 +42,7 @@ eigen_SRC_FILES:= \
 	f2c/d_cnjg.c \
 	f2c/r_cnjg.c
 
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 # EIGEN_ANDROID_SSE_WR is for "Eigen Android SSE Work Around"
 # Will be removed after we understand it better.
 LOCAL_CFLAGS += -DEIGEN_ANDROID_SSE_WR
@@ -56,7 +56,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 # Build Eigen using API 9 toolchain for RS Support lib.
 include $(CLEAR_VARS)
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 # EIGEN_ANDROID_SSE_WR is for "Eigen Android SSE Work Around"
 # Will be removed after we understand it better.
 LOCAL_CFLAGS += -DEIGEN_ANDROID_SSE_WR
